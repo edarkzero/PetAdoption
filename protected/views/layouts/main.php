@@ -49,6 +49,7 @@
 				array('label'=>Yii::t('app','Contact'), 'url'=>array('/site/contact')),
 				array('label'=>Yii::t('app','Pet'), 'url'=>array('/pet/admin')),
 				array('label'=>Yii::t('app','User'), 'url'=>array(Yii::app()->user->isGuest ? '/user/create' : '/user/admin')),
+                array('label'=>Yii::t('app','User rol'), 'url'=>array('/userRol/admin')),
 				array('label'=>Yii::t('app','Login'), 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>Yii::t('app','Logout').'('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

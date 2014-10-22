@@ -2,6 +2,7 @@
 /* @var $this UserController */
 /* @var $model User */
 /* @var $form CActiveForm */
+/* @var $s2_userRoles array */
 
 $baseUrl = Yii::app()->baseUrl;
 $cs = Yii::app()->getClientScript();
@@ -43,7 +44,7 @@ $(document).ready(function() { $('#User_rol_id').select2({allowClear: true}); })
 	<div class="row">
 		<?php echo $form->labelEx($model,'rol_id'); ?>
 		<?php echo $form->dropDownList($model,'rol_id',
-            array('' => '','casa' => 'si','donde' => 'quep s'),
+            $s2_userRoles,
             array('data-placeholder' => Yii::t('app','Select rol'),'style' => 'width:100%')
         ); ?>
 		<?php echo $form->error($model,'rol_id'); ?>

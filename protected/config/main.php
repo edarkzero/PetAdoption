@@ -70,6 +70,7 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=petadoption',
 			'emulatePrepare' => true,
+            'enableParamLogging' => true,
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',

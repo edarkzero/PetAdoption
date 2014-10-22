@@ -1,6 +1,7 @@
 <?php
 /* @var $this UserController */
 /* @var $model User */
+/* @var $s2_userRoles array */
 
 $this->breadcrumbs=array(
 	'Users'=>array('index'),
@@ -18,4 +19,4 @@ $this->menu=array(
 
 <h1>Update User <?php echo $model->id; ?></h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model,'s2_userRoles' => $s2_userRoles)); ?>

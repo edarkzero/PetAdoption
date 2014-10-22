@@ -22,6 +22,12 @@ class User extends CActiveRecord
 		return 'user';
 	}
 
+    public function beforeSave()
+    {
+        $this->password = password_hash($this->password,PASSWORD_BCRYPT);
+        return parent::beforeSave();
+    }
+
 	/**
 	 * @return array validation rules for model attributes.
 	 */

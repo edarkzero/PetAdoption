@@ -380,7 +380,7 @@
 			{
 				foreach ($model as $data)
 				{
-					$aux = !isset($appendAttr) ? (int)$data->{$attribute} : $data->{$attribute} . ',' . $data->{$appendAttr};
+					$aux = !isset($appendAttr) ? $data->{$attribute} : $data->{$attribute} . ',' . $data->{$appendAttr};
 
 					if ($arrayKeyID)
 						$result[$data->id] = $aux;
